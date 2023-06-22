@@ -1,3 +1,3 @@
 const pokemonRouter = require("./pokemon");
 
-module.exports = pokemonRouter;
+module.exports = {pokemonRouter};
