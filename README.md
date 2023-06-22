@@ -1,4 +1,4 @@
-# pokemon-app-server
+# Challenge:
 
 There should be 3 REST API delivered as a backend service:
 1. REST API to return probability is 50% when catching Pokemon.
