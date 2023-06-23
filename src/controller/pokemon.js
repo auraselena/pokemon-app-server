@@ -59,14 +59,15 @@ const catchPokemon = (req, res) => {
 };
 
 const addNickname = (req, res) => {
-  const { uniqueID, nickname } = req.body;
+  const { UID, pokemonName } = req.body;
+  console.log("body", req.body);
   try {
     const dbData = fs.readFileSync("db.json", "utf8");
     const jsonData = JSON.parse(dbData);
 
     const updatedPokemon = jsonData.pokemon.map((pokemon) => {
-      if (pokemon.uniqueID === uniqueID) {
-        pokemon.nickname = nickname;
+      if (pokemon.uniqueID === UID) {
+        pokemon.nickname = pokemonName;
       }
       return pokemon;
     });
